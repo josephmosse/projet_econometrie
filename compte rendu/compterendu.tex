@@ -1,0 +1,169 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{mathtools}
+
+\usepackage{titlesec}
+\usepackage{float}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\setlength{\parindent}{0pt}
+
+\usepackage{amsmath , amsfonts, amssymb}
+
+\begin{document}
+
+\tableofcontents
+
+\section{Introduction} 
+
+\section{Modélisation}
+\subsection{Spécification du modèle}
+\subsubsection{Choix des variables}
+
+\subsubsection{Spécification du modèle}
+Notre premier modèle est formulé de la sorte : 
+\begin{equation}
+\begin{split}
+    locataire_i = & \beta_1 + \beta_2diplomesup_i + \beta_3jeunes_i + \beta_4persagees_i\\
+    + & \beta_5appartements_i + \beta_6chomage_i+ \beta_7urbanisation_i + \beta_8pauvrete_i + \varepsilon_i 
+\end{split}
+\end{equation}
+\subsection{Première Estimation du modèle}
+\subsubsection{Résultats et interprétation}
+On estime par la méthode des moindres carrés ordinaires l'équation. On obtient les résultats suivants :
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    Variables      & \begin{tabular}{c}Coefficients \\estimés\end{tabular} & Écart-type   \\
+    \hline
+    $diplomesup$   & $0.4028115$                                                      & $0.0844738$ \\
+    \hline
+    $jeunes$       & $0.9092502$                                                      & $0.285378$  \\
+    \hline
+    $persagees$    & $0.1280139$                                                      & $0.2338338$ \\
+    \hline
+    $appartements$ & $0.1638682$                                                      & $0.0307458$ \\
+    \hline
+    $chomage$      & $-0.1978747$                                                     & $0.2883803$ \\
+    \hline
+    $urbanisation$ & $0.0080034$                                                      & $0.028728$ \\
+    \hline
+    $pauvrete$     & $0.7533171$                                                      & $0.1317305$ \\
+    \hline
+    $constante$    & $-10.84531$                                                      & $13.04414$ \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{equation*}
+    \begin{split}
+            \hat{locataires}_i &= -10.845 + 0.403 \times diplomesup_i \\
+            &+ 0.909 \times jeunes_i + 0.128 \times persagees_i \\
+            &+ 0.164 \times appartements_i + -0.198 \times chomage_i \\
+            &+ 0.008 \times urbanisation_i + 0.753 \times pauvrete_i
+    \end{split}
+\end{equation*}
+Avec : 
+\begin{equation*}
+    N = 96 \; K = 8 \quad  SCE = 3873,9635 \quad SCR = 485,248588 \quad SCT = 4359,20494
+\end{equation*}
+On peut calculer le coefficient de détermination $R^{2}$ :
+\begin{equation*}
+    R^{2} = \frac{SCE}{SCT} = \frac{3873,9635}{4359,20494} = 0,8887
+\end{equation*}
+On calcule également le coefficient de détermination ajusté aux nombres de variables :
+\begin{equation*}
+    \bar{R}^{2} = 1 - \frac{SCR/(N-K)}{SCT/(N-1)} = \frac{485,248588/88}{4359,20494/95} = 0,8798
+\end{equation*}
+Le coefficient de détermination est élevé $R^{2} = 0.89$, cela laisse penser que notre la combinaison linéaires de nos variables expliquent bien la part de locataires par
+départements. On effectue donc les tests de significativité des paramètres et de significativité conjointe pour prouver cela.
+\subsubsection{Tests de significativité}
+Dans un premier temps, nous allons effectuer un est $F$ de significativité conjointe de tous les paramètres de la pente : 
+\begin{equation*}
+\begin{split}
+    H_0 &: \beta_2 = \beta_3 = \dots \beta_K =0 \\
+    H_1 &: \text{Au moins un }\beta_j \neq 0.
+\end{split}
+\end{equation*}
+La statistique de test sous l'hypothèse nulle est distribuée selon une loi $F$ de Fisher :
+\begin{equation*}
+    F = \frac{SCE/(K-1)}{SCR/(N-K)} \sim F(K-1, N-K)
+\end{equation*}
+On choisi un niveau de test à $\alpha = 5\%$. Et l'on compare la statistique calculée au quantile à $95\%$ de la distribution $F$ de Fisher avec respectivement $7$ et $88$ degrés de liberté
+au numérateur et au dénominateur. 
+\begin{equation*}
+    F_{1-\alpha} (K-1, N-K) = F_{0.95}(7, 88) = 2.121
+\end{equation*}
+On cherche maintenant à savoir si les paramètres estimés sont significativement différents de 0. Pour cela on effectue le test suivant sur les $j = 8$ variables :
+\begin{equation*}
+\begin{split}
+    H_0 &: \beta_j =0 \\
+    H_1 &: \beta_j \neq 0
+\end{split}
+\end{equation*}
+La statistique de test calculée sous l'hypothèse nulle est distribuée selon une loi $t$ de Student : 
+\begin{equation*}
+    t_{\beta_j} = \frac{\hat{\beta_j}}{s_{\hat{\beta_j}}} \sim t(N-K)
+\end{equation*}
+On se place à un niveau de test bilatéral de $\alpha = 5\%$ et la statistique en valeur absolue doit être comparée au quantile à $97,5\%$ de la distribution $t$ de Student à $N-K = 96 - 8 = 
+88$ degrés de liberté, soit le seuil critique :
+\begin{equation*}
+    t_{1-\alpha/2}(N-K) = t_{0,975}(88) = 1,987289865 
+\end{equation*}
+
+Règle de décision : 
+\begin{align*}
+    &\text{Si} |t_{\beta_j}| < 1.99 & &\text{On accepte } H_{0}\\
+    &\text{Si} |t_{\beta_j}| \geq 1.99 & &\text{On rejette } H_{0}
+\end{align*}
+Tous calculs faits, on obtient les résultats suivants :
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|} 
+    \hline
+    Variables      & t calculé  \\ 
+    \hline
+    $constante$    & $t_{\beta_1} =-0.83$      \\
+    \hline
+    $diplomesup$   & $t_{\beta_2} = 4.77$       \\ 
+    \hline
+    $jeunes$       & $t_{\beta_3} =3.19$       \\ 
+    \hline
+    $persagees$    & $t_{\beta_4} =0.55$       \\ 
+    \hline
+    $appartements$ & $t_{\beta_5} =5.33$       \\ 
+    \hline
+    $chomage$      & $t_{\beta_6} =-0.69$      \\ 
+    \hline
+    $urbanisation$ & $t_{\beta_7} =0.28$       \\ 
+    \hline
+    $pauvrete$     & $t_{\beta_8} =5.72$       \\ 
+    \hline
+    \end{tabular}
+\end{table}
+Les statistiques de test $t_{\beta_1},t_{\beta_7},t_{\beta_6} et t_{\beta_3}$ sont inférieures en valeur en absolue au seuil. On accepte donc l'hypothèse nulle,
+les paramètres ne sont pas significatifs, on va donc retirer les variables $urbanisation$, $chomage$ et $persagees$.
+
+En revanche, $t_{\beta_2}, t_{\beta_3}, t_{\beta_5}, t_{\beta_8}$ sont supérieures en valeur absolue au seuil critique de $1,99$. On rejette l'hypothèse nulle pour ces paramètres
+ils sont significatifs (différents de zéro), les variables $diplomesup$, $jeunes$, $appartements$ et $pauvrete$ permettent d'expliquer en partie $locataire$
+\subsubsection{Etude de la multicolinéarité}
+
+\subsection{Estimation du modèle final}
+\subsubsection{Interprétation des résultats}
+\subsubsection{Tests de significativité}
+\subsubsection{Etude de la normalité des résidus}
+\subsubsection{Test sur l'hétéroscédasticité}
+\subsubsection{Estimation du modèle avec écart-type de White}
+\section{Conclusion}
+
+
+
+\end{document}
