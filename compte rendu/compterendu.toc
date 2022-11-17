@@ -1,16 +1,16 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Modélisation}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Spécification du modèle}{1}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Choix des variables}{1}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Spécification du modèle}{1}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Première Estimation du modèle}{1}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Résultats et interprétation}{1}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Tests de significativité}{2}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {2}Modélisation}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Spécification du modèle}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Choix des variables}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Spécification du modèle}{2}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Première Estimation du modèle}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Résultats et interprétation}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Tests de significativité}{3}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Etude de la multicolinéarité}{4}{subsubsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.3}Estimation du modèle final}{4}{subsection.2.3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Interprétation des résultats}{4}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Tests de significativité}{4}{subsubsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.3}Etude de la normalité des résidus}{4}{subsubsection.2.3.3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Test sur l'hétéroscédasticité}{4}{subsubsection.2.3.4}%
-\contentsline {subsubsection}{\numberline {2.3.5}Estimation du modèle avec écart-type de White}{4}{subsubsection.2.3.5}%
-\contentsline {section}{\numberline {3}Conclusion}{4}{section.3}%
+\contentsline {subsection}{\numberline {2.3}Estimation du modèle final}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Interprétation des résultats}{5}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Tests de significativité}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Etude de la normalité des résidus}{5}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Test sur l'hétéroscédasticité}{5}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Estimation du modèle avec écart-type de White}{5}{subsubsection.2.3.5}%
+\contentsline {section}{\numberline {3}Conclusion}{5}{section.3}%
