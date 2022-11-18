@@ -166,19 +166,66 @@ taux\_pauvrete&    2,663816\\
 \bottomrule
 \end{tabular}
 \end{table}
-Il y a donc en effet de la multicolinéarité dans le modèle, les variables part\_jeune et part\_soixante\_cinq\_plus ont un VIF très élevé. Cette dernière sera donc retirée du
-modèle.
+Il y a donc en effet de la multicolinéarité dans le modèle, les variables $jeune$, $persagees$ et $appartements$ ont un vif
+élevé, elles seront donc retirées du modèle afin de traiter la multicolinéarité.
 \subsection{Estimation du modèle final}
 Un second modèle est formulé à la suite des résultats précédents. Ce modèle est tel que :
 \begin{equation*}
     \begin{split}
-            locataire_i =  \beta_1 &+ \beta_2diplomesup_i + \beta_3jeunes_i\\ 
-            &+ \beta_4appartements_i + \beta_5pauvrete_i + \varepsilon_i 
+            locataire_i =  \beta_1 &+ \beta_2diplomesup_i + \beta_3jeunes_i + \beta_5pauvrete_i + \varepsilon_i 
     \end{split}
 \end{equation*}
-Les paramètres du modèle sont estimés une fois de plus grace aux MCO.
+Les paramètres du modèle sont estimés grace aux MCO.
+\begin{table}[H]
+\centering
+\caption{}
+\label{table:secondeReg}
+\begin{tabular}{l*{1}{ccc}}
+\toprule
+Variable            & Coefficient&  Ecart-type&Statistique t\\
+\midrule
+diplomesup&    0,8001962&    0,0612541&    13,06355\\
+jeunes  &     0,960763&    0,1044884&    9,194929\\
+pauvrete&    0,8518716&     0,096727&    8,806969\\
+constante      &   -9,171721&    3,132582&   -2,927847\\
+\midrule
+$N$       &          96& SCE           &   3634,97216           \\
+$R^{2}$ & 0,8339 & SCR & 724,232776   \\ 
+$\bar{R}^2$ & 0,8284 & SCT & 4359,20494\\ 
+\bottomrule
+\end{tabular}
+\end{table}
 \subsubsection{Interprétation des résultats}
+Les coefficients de détermination simple et ajusté sont relativement élevés, la qualité de l'ajustement du modèle est donc bonne. En théorie la
+multicolinéarité a été traitée, pour confirmer cela, un calcul des VIF est efféctué.
+\begin{table}[H]
+\centering
+\caption{VIF}
+\begin{tabular}{l*{1}{c}}
+\toprule
+Variable            &         VIF\\
+\midrule
+constante & 0 \\
+diplomesup & 1,18 \\
+jeunes & 1,17 \\
+pauvrete & 1,01 \\
+\bottomrule
+\end{tabular}
+\end{table}
+Les trois variables présentes dans le modèle ont un VIF proche de un, elles ne génèrent quasiement pas de multicolinéarité.
 \subsubsection{Tests de significativité}
+Des tests $t$ de siginificativité des paramètres fait pour déterminer si les paramètres estimés sont significatifs. Le test est le même que dans la
+section 2.2.2. Les statistiques $t$ ont été calculées lors et sont dans le tableau ~\ref{table:secondeReg}.\\
+
+Un niveau de test bilatéral de $\alpha = 5 \%$ est chosi, la statistique  $t$ doit donc être comparée au quantile à  $97,5\%$ de la distribution de
+Student à 92 degrés de liberté. Le seuil critique est donc :
+\begin{equation*}
+t_{0,975}(92) = 1,98608631695112 
+\end{equation*}
+Toutes les statistiques $t$ des paramètres de la regression sont supérieurs en valeur absolue au seuil critique. $H_0$ est rejetée dans tous les cas.
+Tous les coefficients sont significativements différents de 0.
+\\ \\
+Afin de conclu
 \subsubsection{Etude de la normalité des résidus}
 \subsubsection{Test sur l'hétéroscédasticité}
 \subsubsection{Estimation du modèle avec écart-type de White}
