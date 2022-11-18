@@ -6,15 +6,17 @@
 
 \usepackage{titlesec}
 \usepackage{float}
-\usepackage{booktabs}
+\usepackage{tabularx,booktabs,caption,ragged2e}
 
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-
 \setlength{\parindent}{0pt}
+
+\captionsetup{skip=0.333\baselineskip}
+
 
 \usepackage{amsmath , amsfonts, amssymb}
 
@@ -67,9 +69,12 @@ Le modèle s'écrit alors :
 \begin{equation*}
     \begin{split}
 			\hat{locataire}_i = -10.845 &+ 0.403 \times diplomesup_i \\
-            &+ 0.909 \times jeunes_i + 0.128 \times persagees_i \\
-            &+ 0.164 \times appartements_i + -0.198 \times chomage_i \\
-            &+ 0.008 \times urbanisation_i + 0.753 \times pauvrete_i
+            &+ 0.909 \times jeunes_i \\
+            &+ 0.128 \times persagees_i \\
+            &+ 0.164 \times appartements_i \\
+            &+ 0.198 \times chomage_i \\
+            &+ 0.008 \times urbanisation_i \\
+            &+ 0.753 \times pauvrete_i \\
     \end{split}
 \end{equation*}
 On peut calculer le coefficient de détermination $R^{2}$ :
@@ -99,11 +104,6 @@ comme degrés de liberte $7$ et $88$ respectivement au numérateur et au dénomi
 \begin{equation*}
     F_{1-\alpha} (K-1, N-K) = F_{0.95}(7, 88) = 2.121
 \end{equation*}
-Règle de décision : 
-\begin{align*}
-		\text{Si } F & < 2,121 & & \text{On accepte }H_0 \\ 
-		\text{Si } F & \ge 2,121 & & \text{On rejette }H_0 
-\end{align*}
 Après calculs, $F = 100,364$. La statisitique est supérieure au seuil, l'hypothèse nulle est rejetée au moins une variable permet d'expliquer le modèle.
 \\ \\
 On cherche maintenant à déterminer plus précisément quels sont les paramètres estimés significativement différents de 0. Pour cela, un test $t$ de 
@@ -123,12 +123,6 @@ on $t$ de Student à $88$ degrés de liberté, soit le seuil critique :
 \begin{equation*}
     t_{1-\alpha/2}(N-K) = t_{0,975}(88) = 1,987289865 
 \end{equation*}
-
-Règle de décision : 
-\begin{align*}
-    &\text{Si} |t_{\beta_j}| < 1.99 & &\text{On accepte } H_{0}\\
-    &\text{Si} |t_{\beta_j}| \geq 1.99 & &\text{On rejette } H_{0}
-\end{align*}
 Tous calculs faits, on obtient les résultats suivants :
 \begin{table}[H]
 \centering
@@ -153,13 +147,15 @@ acceptée pour ces paramètres, ils ne sont pas significatifs. Les variables $ur
 En revanche, $t_{\beta_2}, t_{\beta_3}, t_{\beta_5}, t_{\beta_8}$ sont supérieures en valeur absolue au seuil critique de $1,99$. On rejette l'hypothèse nulle pour ces paramètres
 ils sont significatifs, les variables $diplomesup$, $jeunes$, $appartements$ et $pauvrete$ permettent d'expliquer en partie $locataire$
 \subsubsection{Etude de la multicolinéarité}
+Une corrélation forte entre plusieurs variables explicatives peut induire une présence de multicolinéarité dans le modèle. Un calcul du VIF est fait pour chacune des variables.
 \begin{table}[H]
 \centering
 \caption{Facteur d'inflation de la variance}
 \begin{tabular}{l*{1}{c}}
 \toprule
-            &         vif\\
+Variable            &         VIF\\
 \midrule
+constante & 0 \\
 part\_diplome\_sup&    3,199862\\
 part\_jeune  &    12,48724\\
 part\_soixante\_cinq\_plus&    14,58855\\
@@ -170,7 +166,17 @@ taux\_pauvrete&    2,663816\\
 \bottomrule
 \end{tabular}
 \end{table}
+Il y a donc en effet de la multicolinéarité dans le modèle, les variables part\_jeune et part\_soixante\_cinq\_plus ont un VIF très élevé. Cette dernière sera donc retirée du
+modèle.
 \subsection{Estimation du modèle final}
+Un second modèle est formulé à la suite des résultats précédents. Ce modèle est tel que :
+\begin{equation*}
+    \begin{split}
+            locataire_i =  \beta_1 &+ \beta_2diplomesup_i + \beta_3jeunes_i\\ 
+            &+ \beta_4appartements_i + \beta_5pauvrete_i + \varepsilon_i 
+    \end{split}
+\end{equation*}
+Les paramètres du modèle sont estimés une fois de plus grace aux MCO.
 \subsubsection{Interprétation des résultats}
 \subsubsection{Tests de significativité}
 \subsubsection{Etude de la normalité des résidus}
@@ -178,6 +184,7 @@ taux\_pauvrete&    2,663816\\
 \subsubsection{Estimation du modèle avec écart-type de White}
 \section{Conclusion}
 
-
+dico : VIF = Variance inflation factor
+MCO = moindres carrés ordinaires
 
 \end{document}
