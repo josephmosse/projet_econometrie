@@ -1,0 +1,156 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{precarite_etude_sup}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ab25974a396aa1d46e38e9a78cd0d9b1}{%
+           family={Attias},
+           familyi={A\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \strng{fullhash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \strng{bibnamehash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \strng{authorbibnamehash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \strng{authornamehash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \strng{authorfullhash}{ab25974a396aa1d46e38e9a78cd0d9b1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quand la précarité touche aussi les jeunes diplômés}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://start.lesechos.fr/apprendre/universites-ecoles/quand-la-precarite-touche-aussi-les-jeunes-diplomes-1178034
+      \endverb
+      \verb{url}
+      \verb https://start.lesechos.fr/apprendre/universites-ecoles/quand-la-precarite-touche-aussi-les-jeunes-diplomes-1178034
+      \endverb
+    \endentry
+    \entry{evolution_hab}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{50 ans d'évolution des résidences principales : des logements plus grands et moins peuplés}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/5400123
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/5400123
+      \endverb
+    \endentry
+    \entry{insee_portrait_social}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{France, portrait social}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/4238401
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/4238401
+      \endverb
+    \endentry
+    \entry{ipc_loyer}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Le logement dans l’indice des prix à la consommation}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/4126450
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/4126450
+      \endverb
+    \endentry
+    \entry{prix_immo_paris}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Paris et l'ouest parisien : des territoires quasiment inaccessibles à l'achat pour la majorité des locataires franciliens}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/4294778
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/4294778
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

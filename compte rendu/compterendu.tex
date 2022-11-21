@@ -1,35 +1,49 @@
-\documentclass[]{article}
+\documentclass{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{mathtools}
-
+\usepackage{graphicx} 
 \usepackage{titlesec}
 \usepackage{float}
 \usepackage{tabularx,booktabs,caption,ragged2e}
-
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\setlength{\parindent}{0pt}
-
-\captionsetup{skip=0.333\baselineskip}
-
-
+\usepackage{biblatex}
+\usepackage{eurosym}
 \usepackage{amsmath , amsfonts, amssymb}
+
+\addbibresource{bibliographie.bib}
+\setlength{\parindent}{0pt}
+\captionsetup{skip=0.333\baselineskip}
 
 \begin{document}
 
 \tableofcontents
-
+\section{Résumé}
 \section{Introduction} 
+Malgré l'augmentation du nombre de logements, les inégalités ne cessent d'aug-menter. D'après l'Insee le nombre de logements à presque doublé alors que la population n'a augmenté que 
+de 37\%.\cite{evolution_hab}. La hausse des inégalités et la baisse du pouvoir d'achat étant au cœur de l'actualité. Lorsque en 2018, les dépenses de loyers pesaient 6.1\% dans l'IPC\cite{ipc_loyer} Nous avons trouvé bon de traiter la part des locataires en résidences principales. C'est à dire, la part des personnes vivant en résidence principale et qui n'en sont pas propriétaires. \\
+Quels sont donc les facteurs influencent la part de locataire en résidence principale dans les départements Français? 
 
+\section{Données utilisées}
+L’une de nos première idée est de regarder du côté de l’âge. Nous avons donc pris deux premières variables explicatives qui sont respectivement : 
+-la part des soixante-cinq-ans et plus
+-la part des vingt-cinq ans et moins
+On peut penser que les personnes plus âgées ayant travaillé toute leur vie on donc plus les moyens pour acheter leurs résidence principales que les jeunes de moins de vingt-cinq ans sortant pour certain tout juste de l’école.
+L’école peut quant à lui aussi être un bon indicateur. En effet, on peut penser d’un point de vue macroéconomique, qu’une personne diplômée du supérieur gagne plus qu’une personne sans diplômes. Nous avons donc notre troisième variable explicative : 
+-La part des diplômes supérieur ou égale au bac+5.
+Ayant évoqué la richesse, il est intéressant d’essayer de trouver des variables explicatives du point de vue monétaire. C’est pourquoi nous avons décidé de prendre : 
+-le taux de chômage 
+-le taux de pauvreté 
+Il est évident qu’on puisse s’attendre à une forte corrélation entre les deux, ce qui nous amènera par la suite à discuter de la multicolinéarité de notre modèle et choisir laquelle de ces variables nous allons retenir.
+Par légèreté de pensée, on peut penser que les personnes investissant dans leurs résidence principale souhaitent avoir un certain confort autour d'elles. Comme par exemple la présence de commerce, d’école ou de proximité avec leur travail. Pour répondre à ce problème nous avons décidé de prendre comme sixième variable explicative :
+-le taux d’urbanisation.
+Enfin, notre dernière variable porte sur la part d’appartement. On peut penser que ces derniers étant plus petits et moins chers, certains investisseurs les préfèrent aux maisons afin de les mettre en location. De plus, pour les revenus les plus modestes, il est plus accessible d’accéder à une location d’appartement que de maison.
+Tout d'abord, nous pouvons penser à plusieurs variables mais il faut bien prendre en compte que 
+certaines ne 
+soient pas disponibles au sein de l’insee. C’est pourquoi notre étude porte sur les départements de la France métropolitaine.
 \newpage
 \section{Modélisation}
-\subsection{Spécification du modèle}
-\subsubsection{Choix des variables}
+\subsection{Premier modèle}
 \subsubsection{Spécification du modèle}
 Le premier modèle est formulé de la sorte : 
 \begin{equation}
@@ -39,19 +53,18 @@ Le premier modèle est formulé de la sorte :
 						&+ \beta_8pauvrete_i + \varepsilon_i 
 \end{split}
 \end{equation}
-\subsection{Première Estimation du modèle}
-\subsubsection{Résultats et interprétation}
+\subsubsection{Interprétation des résultats }
 On estime par la méthode des moindres carrés ordinaires les coefficients de l'équation précédente.
 \begin{table}[H]
 \centering
 \begin{tabular}{l*{1}{cc}}
 \toprule
             &\multicolumn{2}{c}{Taux locataire}\\
-Variable            & Coefficient         &  Ecart-Type\\
+Variable            & Coefficient         &  Écart-Type\\
 \midrule
 Constante & -10.84531 & 13.04414\\
-part\_diplome\_sup	& 0,4028115	& 0,0844738\\
-part\_jeune  & 0,9092502 & 0,285378\\
+dipsup	& 0,4028115	& 0,0844738\\
+jeune  & 0,9092502 & 0,285378\\
 part\_soixante\_cinq\_plus& 0,1280139 & 0,2338338\\
 part\_appartement& 0,1638682 & 0,0307458\\
 taux\_chomage& 0,1978747 & 0,2883803\\
@@ -68,7 +81,7 @@ SCT & $4359,20494$ \\
 Le modèle s'écrit alors : 
 \begin{equation*}
     \begin{split}
-			\hat{locataire}_i = -10.845 &+ 0.403 \times diplomesup_i \\
+			\hat{locataire}_i = -10.845 &+ 0.403 \times dipsup_i \\
             &+ 0.909 \times jeunes_i \\
             &+ 0.128 \times persagees_i \\
             &+ 0.164 \times appartements_i \\
@@ -88,6 +101,7 @@ On calcule également le coefficient de détermination ajusté aux nombres de va
 Les deux coefficients sont élevés, cela laisse donc à supposer que l'ajustement de de la regression est de bonne qualité. Cependant, des tests de 
 significativité (des paramètres et conjointe), et une étude de la multicolinéarité restent à être menés pour confirmer cela.
 \subsubsection{Tests de significativité}
+\label{sec:testSigni1}
 Dans un premier temps, on réalise un test $F$ de significativité conjointe de tous les paramètres. L'hypothèse nulle, et l'hypothèse alternative de ce test sont telles que :
 \begin{equation*}
 \begin{split}
@@ -100,11 +114,11 @@ La statistique de test sous l'hypothèse nulle est distribuée selon une loi $F$
     F = \frac{SCE/(K-1)}{SCR/(N-K)} \sim F(K-1, N-K)
 \end{equation*}
 On choisi un niveau de test à $\alpha = 5\%$. Et l'on compare la statistique calculée au quantile à $95\%$ de la distribution $F$ de Fisher avec 
-comme degrés de liberte $7$ et $88$ respectivement au numérateur et au dénominateur. 
+comme degrés de liberté $7$ et $88$ respectivement au numérateur et au dénominateur. 
 \begin{equation*}
     F_{1-\alpha} (K-1, N-K) = F_{0.95}(7, 88) = 2.121
 \end{equation*}
-Après calculs, $F = 100,364$. La statisitique est supérieure au seuil, l'hypothèse nulle est rejetée au moins une variable permet d'expliquer le modèle.
+Après calculs, $F = 100,364$. La statistique est supérieure au seuil, l'hypothèse nulle est rejetée au moins une variable permet d'expliquer le modèle.
 \\ \\
 On cherche maintenant à déterminer plus précisément quels sont les paramètres estimés significativement différents de 0. Pour cela, un test $t$ de 
 significativité est effectué sur sur les $8$ paramètres :
@@ -118,8 +132,8 @@ La statistique de test calculée sous l'hypothèse nulle est distribuée selon u
 \begin{equation*}
     t_{\beta_j} = \frac{\hat{\beta_j}}{s_{\hat{\beta_j}}} \sim t(N-K)
 \end{equation*}
-On se place à un niveau de test bilatéral de $\alpha = 5\%$ et la statistique en valeur absolue doit être comparée au quantile à $97,5\%$ de la distributi
-on $t$ de Student à $88$ degrés de liberté, soit le seuil critique :
+On se place à un niveau de test bilatéral de $\alpha = 5\%$ et la statistique en valeur absolue doit être comparée au quantile à $97,5\%$ de la distribution
+ $t$ de Student à $88$ degrés de liberté, soit le seuil critique :
 \begin{equation*}
     t_{1-\alpha/2}(N-K) = t_{0,975}(88) = 1,987289865 
 \end{equation*}
@@ -168,7 +182,7 @@ taux\_pauvrete&    2,663816\\
 \end{table}
 Il y a donc en effet de la multicolinéarité dans le modèle, les variables $jeune$, $persagees$ et $appartements$ ont un vif
 élevé, elles seront donc retirées du modèle afin de traiter la multicolinéarité.
-\subsection{Estimation du modèle final}
+\subsection{Modèle final}
 Un second modèle est formulé à la suite des résultats précédents. Ce modèle est tel que :
 \begin{equation*}
     \begin{split}
@@ -182,9 +196,9 @@ Les paramètres du modèle sont estimés grace aux MCO.
 \label{table:secondeReg}
 \begin{tabular}{l*{1}{ccc}}
 \toprule
-Variable            & Coefficient&  Ecart-type&Statistique t\\
+Variable            & Coefficient&  Écart-type&Statistique t\\
 \midrule
-diplomesup&    0,8001962&    0,0612541&    13,06355\\
+dipsup&    0,8001962&    0,0612541&    13,06355\\
 jeunes  &     0,960763&    0,1044884&    9,194929\\
 pauvrete&    0,8518716&     0,096727&    8,806969\\
 constante      &   -9,171721&    3,132582&   -2,927847\\
@@ -196,8 +210,23 @@ $\bar{R}^2$ & 0,8284 & SCT & 4359,20494\\
 \end{tabular}
 \end{table}
 \subsubsection{Interprétation des résultats}
+Les trois variables explicatives ont un effet positif sur la part de locataires en résidence principale. L'effet marginal de chaque variable peut être étudié, pour cela,
+il suffit de dériver le modèle partiellement par rapport a une des variables pour connaître son effet marginal.
+\begin{align*}
+    &\frac{\partial locataire}{\partial dipsup} = \hat{\beta_2} \simeq 0,8 & &\frac{\partial locataire}{\partial jeune} = \hat{\beta_3} \simeq 0,96 & &\frac{\partial locataire}{\partial pauvrete} = \hat{\beta_3} \simeq 0,85
+\end{align*}
+Par exemple l'augmentation de la part de diplômés BAC+5 ou plus de 1 point entraînera une augmentation de la part de locataire de 0.8 points toutes choses étant égales par ailleurs.
+L'effet le plus fort est l'effet de la population de moins de 25 ans, son effet marginal est presque un pour un. Ce résultat semble logique, puisque les populations jeunes sont très peu
+propriétaires\cite{insee_portrait_social}.
+\\
+D'autre part, les personnes vivant sous le seuil de pauvreté sont moins enclin à acheter un bien immobilier, la location est donc privilégiée.
+\\
+En revanche, l'effet marginal de la part de hauts diplômés est surprenant. Il serait simple de penser que cet effet soit négatif, car une personne ayant fait de longues études aura un niveau
+de vie supérieur à la moyenne et sera donc plus enclin à acheter un bien immobilier pour y vivre. Or ici, l'effet marginal est positif, la principale cause pourrait être le prix élevé de l'immobilier dans les grandes villes (lieu de travail des diplômés supérieurs) en particulier Paris\cite{prix_immo_paris}. Une autre cause pourrait être une mobilité accrue des diplômés
+supérieurs comme les cadres. Ou bien une précarité grandissante des diplômés ne trouvant pas de travail\cite{precarite_etude_sup}
+\\ \\
 Les coefficients de détermination simple et ajusté sont relativement élevés, la qualité de l'ajustement du modèle est donc bonne. En théorie la
-multicolinéarité a été traitée, pour confirmer cela, un calcul des VIF est efféctué.
+multicolinéarité a été traitée, pour confirmer cela, un calcul des VIF est effectué.
 \begin{table}[H]
 \centering
 \caption{VIF}
@@ -206,32 +235,80 @@ multicolinéarité a été traitée, pour confirmer cela, un calcul des VIF est 
 Variable            &         VIF\\
 \midrule
 constante & 0 \\
-diplomesup & 1,18 \\
+dipsup & 1,18 \\
 jeunes & 1,17 \\
 pauvrete & 1,01 \\
 \bottomrule
 \end{tabular}
 \end{table}
-Les trois variables présentes dans le modèle ont un VIF proche de un, elles ne génèrent quasiement pas de multicolinéarité.
+Les trois variables présentes dans le modèle ont un VIF proche de un, elles ne génèrent quasiment pas de multicolinéarité.
 \subsubsection{Tests de significativité}
-Des tests $t$ de siginificativité des paramètres fait pour déterminer si les paramètres estimés sont significatifs. Le test est le même que dans la
-section 2.2.2. Les statistiques $t$ ont été calculées lors et sont dans le tableau ~\ref{table:secondeReg}.\\
-
-Un niveau de test bilatéral de $\alpha = 5 \%$ est chosi, la statistique  $t$ doit donc être comparée au quantile à  $97,5\%$ de la distribution de
+Des tests $t$ de significativité des paramètres sont fait pour déterminer si les paramètres estimés sont significatifs. Le test est le même que dans la
+section 2.2.2. Les statistiques $t$ sont dans le tableau ~\ref{table:secondeReg}.
+\\
+Un niveau de test bilatéral de $\alpha = 5 \%$ est choisis, la statistique  $t$ doit donc être comparée au quantile à  $97,5\%$ de la distribution de
 Student à 92 degrés de liberté. Le seuil critique est donc :
 \begin{equation*}
-t_{0,975}(92) = 1,98608631695112 
+t_{0,975}(92) = 1,986
 \end{equation*}
 Toutes les statistiques $t$ des paramètres de la regression sont supérieurs en valeur absolue au seuil critique. $H_0$ est rejetée dans tous les cas.
-Tous les coefficients sont significativements différents de 0.
-\\ \\
-Afin de conclu
+Tous les coefficients sont significativement différents de 0.
+\\
+La significativité est aussi testée avec le test $F$ de Fisher comme précédemment dans la section ~\ref{sec:testSigni1}. La statistique $F$ calculée est :
+\begin{equation*}
+    F =  \frac{3634,97216/3}{724,232776/92} = 153,918
+\end{equation*}
+Le niveau de test étant $5\%$, cette dernière est comparée au quantile à $95\%$ de la distribution de Fisher. Le seuil est donc :
+\begin{equation*}
+    F_{0,95}(3,92) = 2,704
+\end{equation*}
+Or $F > 2,704$ l'hypothèse nulle est rejetée, l'ajustement du modèle est de bonne qualité.
 \subsubsection{Etude de la normalité des résidus}
+Pour que les estimateurs soient de bonne qualité il faut que les erreurs de la régression suivent une loi normale pour cela les résidus sont sont calculés 
+et trouvés dans la table ~\ref{tab:erreurs} des annexes. Ci dessous sont représentés les résidus sous forme d'histogramme, ainsi que, la courbe d'une 
+loi normale de même espérance et variance $\mathcal{N}(0,2.76)$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=.6]{Graph.eps}
+    \caption{Histogramme des erreurs}
+	\label{fig:histogrammeErreur}
+\end{figure}
+Graphiquement, les résidus semblent suivre la distribution d'une loi normale de meme variance et espérance.
 \subsubsection{Test sur l'hétéroscédasticité}
-\subsubsection{Estimation du modèle avec écart-type de White}
+La présence d'hétéroscédasticité dans le modèle pourrait résulter en une mauvaise estimation de la variance des paramètres, dans ce cas là les tests
+de significativité de ces paramètres deviendraient invalides. Le test de White d'hétéroscédasticité est réalisé. Les résidus au carré sont estimés par les MCO.
+\begin{equation*}
+    \begin{split}
+        e^2_i = \phi_0 &+ \phi_1 dipsup_i + \phi_2 jeune_i + \phi_3 pauvrete_i\\
+        &+ \phi_4 dipsup^2_i + \phi_5 jeune^2_i + \phi_6 pauvrete^2_i \\
+        &+ \phi_7 dipsup_i \cdot jeune_i+ \phi_8 dipsup_i \cdot pauvrete_i + \phi_9 jeune_i \cdot pauvrete_i
+    \end{split}
+\end{equation*}
+Les hypothèses sont :
+\begin{align*}
+    &H_0 : \phi_0 = \phi_1 = \dots =  \phi_9 = 0 & &\text{Homoscédasticité des erreurs} \\
+    &H_1 : \text{Au moins un } \phi_j \neq 0 & &\text{Hétéroscédasticité des erreurs}
+\end{align*}
+La statistique de test est un multiplicateur de Lagrange : $\text{LM} = N \times R^2$ qui est comparé au quantile à $95\%$ (pour un niveau de test à $5\%$) 
+de la distribution du khi-deux avec comme degrés de liberté $9$. Les résultats sont représentés dans le tableau ci dessous
+\begin{table}[H]
+\centering
+\caption{Test de White}
+\begin{tabular}{l*{1}{c}|{c}{c}}
+    \toprule
+    $N$ &          96 & $N \times R^2$ & 13,344\\
+    $R^{2}$   &       0.139 & $\chi^2_{0.95}(9)$ &16,919 \\
+    \bottomrule
+\end{tabular}
+\end{table}
+La statistique de test est inférieure au seuil critique ($N \times R^2 < \chi^2(9)$). L'hypo-thèse nulle d'homoscédasticité est acceptée.
+\\
+Le modèle respecte donc bien toutes les hypothèses du modèle linéaire. Le modèle est bien spécifié et les estimateurs sont de bonne qualité.
 \section{Conclusion}
 
 dico : VIF = Variance inflation factor
 MCO = moindres carrés ordinaires
-
+\section{Bibliographie}
+\printbibliography
+\section{Annexes}
 \end{document}
