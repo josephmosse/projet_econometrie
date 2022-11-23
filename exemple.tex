@@ -1,10 +1,16 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{1}{cccccc}}
-\hline\hline
-            &\multicolumn{6}{c}{taux\_locataire}                                           \\
-            &part\_diplome\_sup&  part\_jeune&part\_soixante\_cinq\_plus&taux\_chomage&   taux\_urba&taux\_pauvrete\\
-\hline
-\hline\hline
+\begin{tabular}{l*{1}{cccc}}
+\toprule
+            &        mean&          sd&         min&         max\\
+\midrule
+dipsup      &    8.136458&    5.101788&         3.8&        39.5\\
+appart      &    35.86146&    17.25502&        12.9&        96.9\\
+chomage     &    7.552083&    1.469549&         4.3&        12.3\\
+urba        &    68.06979&    17.62489&        21.4&         100\\
+persagee    &    22.16875&    3.935301&        11.9&        30.1\\
+pauvrete    &    14.36667&    2.985003&         9.1&        27.9\\
+jeune       &    27.99479&    2.983265&        21.6&        35.4\\
+\bottomrule
 \end{tabular}
 }

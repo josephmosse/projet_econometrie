@@ -46,6 +46,35 @@
       \verb https://start.lesechos.fr/apprendre/universites-ecoles/quand-la-precarite-touche-aussi-les-jeunes-diplomes-1178034
       \endverb
     \endentry
+    \entry{pauvrete_locataires}{online}{}
+      \name{author}{1}{}{%
+        {{hash=84ed660d6d52bbbd4509dae9f1aa0d6c}{%
+           family={inégalités},
+           familyi={i\bibinitperiod},
+           given={Observatoire},
+           giveni={O\bibinitperiod},
+           prefix={des},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \strng{fullhash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \strng{bibnamehash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \strng{authorbibnamehash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \strng{authornamehash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \strng{authorfullhash}{84ed660d6d52bbbd4509dae9f1aa0d6c}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La pauvreté touche d'abord les locataires}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.inegalites.fr/pauvrete-locataires-proprietaires
+      \endverb
+      \verb{url}
+      \verb https://www.inegalites.fr/pauvrete-locataires-proprietaires
+      \endverb
+    \endentry
     \entry{evolution_hab}{online}{}
       \name{author}{1}{}{%
         {{hash=69ec093dab9cf86b631679c6e3c79926}{%
@@ -98,7 +127,7 @@
       \verb https://www.insee.fr/fr/statistiques/4238401
       \endverb
     \endentry
-    \entry{ipc_loyer}{online}{}
+    \entry{part_appart}{online}{}
       \name{author}{1}{}{%
         {{hash=69ec093dab9cf86b631679c6e3c79926}{%
            family={Insee},
@@ -115,7 +144,33 @@
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Le logement dans l’indice des prix à la consommation}
+      \field{title}{France, portrait social}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/5432517
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/5432517
+      \endverb
+    \endentry
+    \entry{ipc_loyer}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Le logement dans l'indice des prix à la consommation}
       \field{year}{2019}
       \verb{urlraw}
       \verb https://www.insee.fr/fr/statistiques/4126450
@@ -136,7 +191,7 @@
       \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}

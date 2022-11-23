@@ -1,0 +1,17 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{8}{c}}
+\topline                                                                                                                             \\
+          &locataire         &   dipsup         &   appart         &  chomage         &     urba         & persagee         & pauvrete         &    jeune         \\
+\medline
+locataire &        1         &                  &                  &                  &                  &                  &                  &                  \\
+dipsup    &    0.736\sym{***}&        1         &                  &                  &                  &                  &                  &                  \\
+appart    &    0.849\sym{***}&    0.789\sym{***}&        1         &                  &                  &                  &                  &                  \\
+chomage   &    0.300\sym{**} &  -0.0646         &    0.125         &        1         &                  &                  &                  &                  \\
+urba      &    0.780\sym{***}&    0.644\sym{***}&    0.783\sym{***}&    0.319\sym{**} &        1         &                  &                  &                  \\
+persagee  &   -0.729\sym{***}&   -0.552\sym{***}&   -0.630\sym{***}&  -0.0944         &   -0.695\sym{***}&        1         &                  &                  \\
+pauvrete  &    0.315\sym{**} &  -0.0775         &    0.111         &    0.755\sym{***}&    0.127         &   0.0374         &        1         &                  \\
+jeune     &    0.643\sym{***}&    0.384\sym{***}&    0.476\sym{***}&    0.150         &    0.649\sym{***}&   -0.937\sym{***}&  -0.0311         &        1         \\
+\botomline
+\end{tabular}
+}
