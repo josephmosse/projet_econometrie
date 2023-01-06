@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[table]{xcolor}
@@ -8,20 +8,53 @@
 \usepackage{titlesec}
 \usepackage{float}
 \usepackage{tabularx,booktabs,caption,ragged2e}
-\usepackage{biblatex}
+\usepackage[style=verbose]{biblatex}
 \usepackage{eurosym}
 \usepackage{amsmath , amsfonts, amssymb}
-\usepackage{longtable}
 \usepackage{adjustbox}
+\usepackage{fancyhdr}
 \addbibresource{bibliographie.bib}
 \setlength{\parindent}{0pt}
+\setlength{\headheight}{14.61858pt}
 \captionsetup{skip=0.333\baselineskip}
+\usepackage{geometry}
+\geometry{a4paper,textwidth=480pt}
+
 
 \begin{document}
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.25\textwidth]{um.png}\par\vspace{0.5cm}
+    {\Large Université de Montpellier \par}
+    {\large Faculté d'économie\par}
+    \vfill
+    {\huge\bfseries Travail Économétrique\par}
+    \vspace{0.1cm}
+    {\Large La part des locataires dans les départements Français\par}
+
+    \vfill
+    {\Large Mosse Joseph, Rubira Pierre\par}
+    \vfill
+    {\large Économétrie théorique \par}
+    {M1-MBFA - Année 2022-2023\par}
+
+\end{titlepage}
+\pagestyle{fancy}
+\fancyhead{}
+
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{La part des locataires}
+\fancyfoot{} 
+\fancyfoot[R]{Page \thepage}
 \section{Résumé}
-\section{Introduction} 
+L'objectif de ce travail économétrique est de mettre en évidence les relations de cause entre la part de locataires en résidences principales au niveau des départements Français et 
+diverses variables macroéconomiques de ces départements. Cette étude nous a mené à construire un premier modèle linéaire et à l'estimer par la méthode des moindres carrés ordinaires. 
+Ce modèle étant soumis à de la multicolinéarité, nous avons du retirer des variables afin d'obtenir un modèle final de bonne qualité, capable de bien expliquer les proportions de 
+locataires par départements.
+
+\section{Introduction}
 Malgré l'augmentation du nombre de logements, les inégalités ne cessent d'aug-menter. D'après l'Insee le nombre de logements à presque doublé alors que la population n'a augmenté que 
-de 37\%\cite{evolution_hab}. La hausse des inégalités et la baisse du pouvoir d'achat étant au cœur de l'actualité. Lorsque en 2018, les dépenses de loyers pesaient 6.1\% dans l'IPC\cite{ipc_loyer}, ou bien que 24\% des ménages détiennent plus de la moitié des logements possédés\cite{part_appart}. Nous avons trouvé bon d'essayer de modéliser économétriquement la part des locataires en résidences principales. C'est à dire, la part des personnes vivant en résidence principale et qui n'en sont pas propriétaires. La problématique est la suivante :
+de 37\%\footcite{evolution_hab}. La hausse des inégalités et la baisse du pouvoir d'achat étant au cœur de l'actualité. Lorsque en 2018, les dépenses de loyers pesaient 6.1\% dans l'IPC\footcite{ipc_loyer}, ou bien que 24\% des ménages détiennent plus de la moitié des logements possédés\footcite{part_appart}. Nous avons trouvé bon d'essayer de modéliser économétriquement la part des locataires en résidences principales. C'est à dire, la part des personnes vivant en résidence principale et qui n'en sont pas propriétaires. La problématique est la suivante :
 Quels sont donc les principaux facteurs expliquant la part de locataire en résidence principale dans les départements Français? 
 
 \section{Données utilisées}
@@ -35,18 +68,18 @@ La variable dépendante est :
 En moyenne, le taux de locataires dans un département de France métropolitaine est de 36,47 \%, avec pour minimum 24,3\% (Creuse) et pour maximum 61,7\%(Paris).
 L'écart type de la part de locataires, est assez élevé à 6,77\%. Cela dénote une certaine hétérogénéité entre les différents départements Français.
 \subsection{Variables explicatives}
-Au total, sept variables sous forme de taux ont été choisies pour essayer d'expliquer la part de locataires.
+Au total, sept variables sous forme de taux ont été choisies pour essayer d'expli-quer la part de locataires.
 \begin{itemize}
     \item $dipsup$ : La part des diplômés d'un BAC+5 ou plus, le niveau de diplôme conditionne la catégorie socioprofessionnelle d'un travailleur et par extension son salaire
         . La part des hauts diplômés peut donc être un bon indicateur de niveau de vie.
-    \item $appart$ : La part d'appartements dans le total des logements. Le parc locatif Français comprend une majorité d'appartements\cite{part_appart}, cette variable pourrait donc
+    \item $appart$ : La part d'appartements dans le total des logements. Le parc locatif Français comprend une majorité d'appartements\footcite{part_appart}, cette variable pourrait donc
         avoir un fort impact positif sur la part de locataires.
     \item $chomage$ : Le taux de chômage annuel moyen. Le taux de chômage peut être un bon indicateur de richesse, un agent au chômage aura une plus faible chance de pouvoir contracter
         un prêt que un agent n'étant pas au chômage, et par conséquent aura plus tendance à être locataire.
     \item $urba$ : La part de la population vivant dans une unité urbaine, permet de donner un bon aperçu de la proportion d'habitants urbains.
     \item $persagee$ : La part des personnes âgées de 65 ans ou plus dans la population. Cette variable devrait avoir un effet négatif sur la part de locataires, car plus l'age augmente, plus
-        un agent est susceptible d'accumuler du capital et a utiliser ce dernier dans l'acquisition d'un bien immobilier. En fonction de l'age, la part de propriétaires augmente grandement.\cite{part_appart}
-    \item $pauvrete$ : Le taux de pauvreté. Comme indicateur de richesse, en effet, la pauvreté a plus tendance a toucher les locataires.\cite{pauvrete_locataires}
+        un agent est susceptible d'accumuler du capital et a utiliser ce dernier dans l'acquisition d'un bien immobilier. En fonction de l'age, la part de propriétaires augmente grandement.\footcite{part_appart}
+    \item $pauvrete$ : Le taux de pauvreté. Comme indicateur de richesse, en effet, la pauvreté a plus tendance a toucher les locataires.\footcite{pauvrete_locataires}
     \item $jeune$ : La part des personnes âgées de moins de 25 ans dans la population. Au contraire des personnes âgées de plus de 25 ans, cette variable devrait avoir un effet positif sur
         la variable dépendante.
     \end{itemize}
@@ -82,18 +115,27 @@ Une fois les variables sélectionnées, une matrice de corrélation des variable
         \toprule
                   &locataire        &   dipsup      &   appart         &  chomage         &     urba         & persagee         & pauvrete         &    jeune         & ville\\
         \midrule
-        locataire &        1        &               &                  &                  &                  &                  &                  &                  &\\
-        dipsup    &    0,736        &        1      &                  &                  &                  &                  &                  &                  &\\
-        appart    &    0,849        &    0,789      &        1         &                  &                  &                  &                  &                  &\\
-        chomage   &    0,300        &  -0,0646      &    0,125         &        1         &                  &                  &                  &                  &\\
-        urba      &    0,780        &    0,644      &    0,783         &    0,319         &        1         &                  &                  &                  &\\
-        persagee  &   -0,729        &   -0,552      &   -0,630         &  -0,0944         &   -0,695         &        1         &                  &                  &\\
-        pauvrete  &    0,315        &  -0,0775      &    0,111         &    0,755         &    0,127         &   0,0374         &        1         &                  &\\
-        jeune     &    0,643        &    0,384      &    0,476         &    0,150         &    0,649         &   -0,937         &  -0,0311         &        1         &\\
-        ville     &   0.4998        &   0.4039      & 0.4285           & 0.0906           &0.4574            &  -0.2772         &   0.0464         &    0.2840        &1.0000\\
+        locataire &     1        &               &                 &                  &                  &                  &                  &                  &\\
+        dipsup    &    0,74      &        1      &                 &                  &                  &                  &                  &                  &\\
+        appart    &    0,85      &    0,79       &        1        &                  &                  &                  &                  &                  &\\
+        chomage   &    0,30      &  -0,06        &    0,13         &        1         &                  &                  &                  &                  &\\
+        urba      &    0,78      &    0,64       &    0,78         &    0,32          &        1         &                  &                  &                  &\\
+        persagee  &   -0,73      &   -0,55       &   -0,63         &  -0,10           &   -0,70          &        1         &                  &                  &\\
+        pauvrete  &    0,32      &  -0,08        &    0,11         &    0,76          &    0,13          &   0,04           &        1         &                  &\\
+        jeune     &    0,64      &    0,38       &    0,48         &    0,15          &    0,65          &   -0,94          &  -0,03           &        1         &\\
+        ville     &   0.50       &   0.40        &   0.43          & 0.09             & 0.46             &  -0.28           &   0.05           &    0.28          &1\\
         \bottomrule
         \end{tabular}}
 \end{table}
+Les variables expliquées choisies sont relativement bien corrélées avec la variable dépendante, en effet la variable la plus corrélée positivement avec la part de
+locataires est la part d'appartements. Une simple régression linéaire représentée graphiquement si dessous permet de confirmer cette tendance.
+\begin{figure}[H]
+    \centering
+    \caption{Regression de $locataires$ sur $appart$ }
+\includegraphics[scale=.6]{part_appart.eps}
+\end{figure}
+Il est possible de détecter une forte corrélation entre certaines variables explicatives en particulier les variables $persagee$ et $jeune$, ce qui pourrait poser un problème
+de colinéarité lors de la modélisation.
 \newpage
 \section{Modélisation}
 \subsection{Modèle initial}
@@ -111,24 +153,24 @@ On estime par la méthode des moindres carrés ordinaires les coefficients de l'
 \begin{table}[H]
 \centering
 \caption{Première regression}
-\begin{tabular}{l*{1}{cc}}
+\begin{tabular}{l*{1}{|cc}}
 \toprule
 Variable            & Coefficient         &  Écart-Type\\
 \midrule
-Constante &  -0,5843203 &  13,0103\\
-dipsup	& 0,3628173	& 0,0822579\\
-jeune  & 0,7166451 & 0,2818662\\
-persagee&  -0,0439146 & 0,2321425\\
-appart& 0,1539156 & 0,0297159\\
-chomage& -0,1594068 & 0,2771842\\
-ubra& -0,0037748 & 0,0278766\\
-pauvrete& 0,739118& 0,1265662\\
-ville &   2,175549  &  0,747542\\
+Constante &  -0,58 &  13,0103\\
+dipsup	& 0,36	& 0,0822579\\
+jeune  & 0,72 & 0,28\\
+persagee&  -0,04 & 0,23\\
+appart& 0,15 & 0,03\\
+chomage& -0,16 & 0,28\\
+ubra& -0,003 & 0,03\\
+pauvrete& 0,74& 0,13\\
+ville &   2,18  &  0,75\\
 \midrule
 N&          96         &            \\
-SCE & $3917,00559$ \\
-SCR & $442,199351$ \\
-SCT & $4359,20494$ \\
+SCE & $3917,01$ \\
+SCR & $442,20$ \\
+SCT & $4359,20$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -191,7 +233,7 @@ Tous calculs faits, les résultats sont :
 \begin{table}[H]
 \centering
 \caption{Statistique $t$}
-\begin{tabular}{l*{1}{c}}
+\begin{tabular}{l*{1}{|c}}
 \toprule
 Variable            &Statistique $t$\\
 \midrule
@@ -216,7 +258,7 @@ Une corrélation forte entre plusieurs variables explicatives peut induire une p
 \begin{table}[H]
 \centering
 \caption{Facteur d'inflation de la variance}
-\begin{tabular}{l*{1}{c}}
+\begin{tabular}{l*{1}{|c}}
 \toprule
 Variable            &         VIF\\
 \midrule
@@ -249,33 +291,33 @@ Les paramètres du modèle sont estimés grace aux MCO.
 \toprule
 Variable            & Coefficient&  Écart-type&Statistique t\\
 \midrule
-constante      &   -9,171721&    3,132582&   -2,39\\
-dipsup&    0,7317861 &    0,0619359&    11,82\\
-jeune  &     0,910416 &    0,100601&    9,05\\
-pauvrete&    0,8258328 &     0,0923714 &   8,94\\
-ville &   2,717385 &  0,8330725   &  3,26 \\
+constante      &   -9,17&    3,13&   -2,39\\
+dipsup&    0,73 &    0,06&    11,82\\
+jeune  &     0,91 &    0,10&    9,05\\
+pauvrete&    0,83 &     0,09 &   8,94\\
+ville &   2,72 &  0,83   &  3,26 \\
 \midrule
-$N$       &          96& SCE & 3710,78643           \\
-$R^{2}$ & 0,8513 &       SCR & 648,418512   \\ 
-$\bar{R}^2$ & 0,8447 &   SCT & 4359,20494 \\ 
+$N$       &          96& SCE & 3710,79           \\
+$R^{2}$ & 0,85 &       SCR & 648,42   \\ 
+$\bar{R}^2$ & 0,84 &   SCT & 4359,20 \\ 
 \bottomrule
 \end{tabular}
 \end{table}
 \subsubsection{Interprétation des résultats}\label{sec:result}
-Les trois variables explicatives ont un effet positif sur la part de locataires en résidence principale. L'effet marginal de chaque variable peut être étudié, pour cela,
-il suffit de dériver le modèle partiellement par rapport a une des variables pour connaître son effet marginal.
+Les quatres variables explicatives ont un effet positif sur la part de locataires en résidence principale. L'effet marginal de chaque variable peut être étudié, pour cela,
+il suffit de dériver le modèle partiellement par rapport à une des variables pour connaître son effet marginal.
 \begin{align*}
     &\frac{\partial locataire}{\partial dipsup} = \hat{\beta_2} \simeq 0,73 & &\frac{\partial locataire}{\partial jeune} = \hat{\beta_3} \simeq 0,91 &\frac{\partial locataire}{\partial pauvrete} = \hat{\beta_4} \simeq 0,83
 \end{align*}
 Par exemple l'augmentation de la part de diplômés BAC+5 ou plus de 1 point entraînera une augmentation de la part de locataire de 0.73 points toutes choses étant égales par ailleurs.
 L'effet le plus fort est l'effet de la population de moins de 25 ans, son effet marginal est presque un pour un. Ce résultat semble logique, puisque les populations jeunes sont très peu
-propriétaires\cite{insee_portrait_social}.
+propriétaires\footcite{insee_portrait_social}.
 \\
 D'autre part, les personnes vivant sous le seuil de pauvreté sont moins enclin à acheter un bien immobilier, la location est donc privilégiée.
 \\
 En revanche, l'effet marginal de la part de hauts diplômés est surprenant. Il serait simple de penser que cet effet soit négatif, car une personne ayant fait de longues études aura un niveau
-de vie supérieur à la moyenne et sera donc plus enclin à acheter un bien immobilier pour y vivre. Or ici, l'effet marginal est positif, la principale cause pourrait être le prix élevé de l'immobilier dans les grandes villes (lieu de travail des diplômés supérieurs) en particulier Paris\cite{prix_immo_paris}. Une autre cause pourrait être une mobilité accrue des diplômés
-supérieurs comme les cadres. Ou bien une précarité grandissante des diplômés ne trouvant pas de travail\cite{precarite_etude_sup}
+de vie supérieur à la moyenne et sera donc plus enclin à acheter un bien immobilier pour y vivre. Or ici, l'effet marginal est positif, la principale cause pourrait être le prix élevé de l'immobilier dans les grandes villes (lieu de travail des diplômés supérieurs) en particulier Paris\footcite{prix_immo_paris}. Une autre cause pourrait être une mobilité accrue des diplômés
+supérieurs comme les cadres. Ou bien une précarité grandissante des diplômés ne trouvant pas de travail\footcite{precarite_etude_sup}
 L'effet de la présence d'une grande ville dans le département est aussi élevé. Cela confirme que les locataires ont tendance a habiter en ville.
 \\ \\
 Les coefficients de détermination simple et ajusté sont relativement élevés, la qualité de l'ajustement du modèle est donc bonne. En théorie la
@@ -294,7 +336,7 @@ pauvrete&  1.01  \\
 \bottomrule
 \end{tabular}
 \end{table}
-Les trois variables présentes dans le modèle ont un VIF proche de un, elles ne génèrent quasiment pas de multicolinéarité.
+Les quatres variables présentes dans le modèle ont un VIF proche de un, elles ne génèrent quasiment pas de multicolinéarité.
 \subsubsection{Tests de significativité}
 Des tests $t$ de significativité des paramètres sont fait pour déterminer si les paramètres estimés sont significatifs. Le test est le même que dans la
 section 2.2.2. Les statistiques $t$ sont dans le tableau ~\ref{table:secondeReg}.
@@ -317,9 +359,8 @@ Le niveau de test étant $5\%$, cette dernière est comparée au quantile à $95
 \end{equation*}
 Or $F > 2,472$ l'hypothèse nulle est rejetée, l'ajustement du modèle est de bonne qualité.
 \subsubsection{Etude de la normalité des résidus}
-Pour que les estimateurs soient de bonne qualité il faut que les erreurs de la régression suivent une loi normale pour cela les résidus sont sont calculés 
-et trouvés dans la table ~\ref{appendix:erreurs} des annexes. Ci dessous sont représentés les résidus sous forme d'histogramme, ainsi que, la courbe d'une 
-loi normale de même espérance et variance $\mathcal{N}(0,2.61)$.
+Pour que les estimateurs soient de bonne qualité il faut que les erreurs de la régression suivent une loi normale pour cela les résidus sont sont calculés. Ci dessous sont représentés les résidus sous forme d'histogramme, ainsi que, la courbe d'une 
+loi normale de même espérance et variance $\mathcal{N}(0,6,83)$.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=.6]{Graph.eps}
@@ -357,22 +398,44 @@ Le modèle présenté a eu pour but d'expliquer la part de locataire dans la pop
 que la proportion de locataires dans un département est en partie dûe au fait que ce département possède une grande ville. Ainsi, cette dernière attitrera professionnellement une partie
 de la population diplômée (comme Paris avec presque 40\% de la population hautement diplômée) qui pour des raisons proposées dans la section ~\ref{sec:result} préféreront la location à
 l'achat. D'un autre côté, le taux de pauvreté explique relativement bien la part de locataires, ceci dénote une difficulté d'accès a la propriété pour les personnes vivant en dessous
-du seuil de pauvreté. Ainsi pour finir le modèle démontre que l'âge peut être considéré comme un déterminant de la part de locataires.
+du seuil de pauvreté. Ainsi pour finir le modèle démontre que l'âge peut être considéré comme un déterminant de la part de locataires, plus un individu vieilli, plus il accumule
+de capital et sera plus enclin à être propriétaire.
 Certaines variables auraient pû être rajoutées, comme les prix de l'immobilier ou bien la part d'étudiants, car de telles données n'existent pas, ou alors
 ne sont pas fournies par l'INSEE au niveau des départements.
-
-dico : VIF = Variance inflation factor
-MCO = moindres carrés ordinaires
 \newpage
-\section{Bibliographie}
-\printbibliography
-
-\appendix
 \section{Annexes}
-Matrice X
-Première sortie
-Matrice X finale
-Sortie finale
-Matrice e
-Regression auxilière
+\appendix
+\section{Données utilisées}
+\begin{itemize}
+    \item Part des locataires : \cite{locataire}
+    \item Par des BAC+5 ou plus : \cite{dipsup}
+    \item Part des moins de 25 ans et part des plus de 65 ans \cite{jeune_persagee}
+    \item Taux de chomage : \cite{chomage}
+    \item Taux d'urbanisation : \cite{urba}
+    \item Taux de pauvreté : \cite{pauvrete}
+    \item Population des villes de France : \cite{ville}
+    \item Part des appartements dans le total des logements : \cite{appart}
+\end{itemize}
+\section{Modèle initial}
+\begin{table}[H]
+    \caption{Première estimation par la méthode des MCO}
+    \centering
+    \adjustbox{max width=\textwidth}{%
+    \input{premierereg.tex}}
+\end{table}
+\section{Modèle final}
+\subsection{Estimation}
+\begin{table}[H]
+    \caption{Seconde estimation par la méthode des MCO}
+    \centering
+    \adjustbox{max width=\textwidth}{%
+    \input{secondereg.tex}}
+\end{table}
+\subsection{Résidus}\label{appendix:erreurs}
+\begin{table}[H]
+    \caption{Statistiques sur les résidus}
+    \centering
+    \adjustbox{max width=\textwidth}{%
+    \input{residus.tex}}
+\end{table}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.7)  23 NOV 2022 02:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8.28) (preloaded format=pdflatex 2022.9.7)  24 NOV 2022 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,8 +8,8 @@ entering extended mode
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-23> (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
-(C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+(C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -433,6 +433,8 @@ Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'verbose.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count343
@@ -540,32 +542,32 @@ File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count419
 )
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
- (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
-File: numeric.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'verbose'...
+Package biblatex Info: ... file 'verbose.bbx' found.
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\verbose.bbx
+File: verbose.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.bbx' found.
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\authortitle.bbx
+File: authortitle.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count420
 \c@bbx:relatedtotal=\count421
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
-File: numeric.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
+)))
+Package biblatex Info: Trying to load citation style 'verbose'...
+Package biblatex Info: ... file 'verbose.cbx' found.
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\verbose.cbx
+File: verbose.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -601,33 +603,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
-Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip98
-\LTright=\skip99
-\LTpre=\skip100
-\LTpost=\skip101
-\LTchunksize=\count423
-\LTcapwidth=\dimen197
-\LT@head=\box61
-\LT@firsthead=\box62
-\LT@foot=\box63
-\LT@lastfoot=\box64
-\LT@gbox=\box65
-\LT@cols=\count424
-\LT@rows=\count425
-\c@LT@tables=\count426
-\c@LT@chunks=\count427
-\LT@p@ftn=\toks30
 ) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
 )
-\XKV@depth=\count428
+\XKV@depth=\count423
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -635,69 +619,97 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box66
+\collectedbox=\box61
 )
-\tc@llx=\dimen198
-\tc@lly=\dimen199
-\tc@urx=\dimen256
-\tc@ury=\dimen257
+\tc@llx=\dimen197
+\tc@lly=\dimen198
+\tc@urx=\dimen199
+\tc@ury=\dimen256
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen258
-\adjbox@Height=\dimen259
-\adjbox@Depth=\dimen260
-\adjbox@Totalheight=\dimen261
-\adjbox@pwidth=\dimen262
-\adjbox@pheight=\dimen263
-\adjbox@pdepth=\dimen264
-\adjbox@ptotalheight=\dimen265
+\adjbox@Width=\dimen257
+\adjbox@Height=\dimen258
+\adjbox@Depth=\dimen259
+\adjbox@Totalheight=\dimen260
+\adjbox@pwidth=\dimen261
+\adjbox@pheight=\dimen262
+\adjbox@pdepth=\dimen263
+\adjbox@ptotalheight=\dimen264
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count429
+\c@checkoddpage=\count424
 ) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box67
-\sift@deathcycles=\count430
-\@vwid@loff=\dimen266
-\@vwid@roff=\dimen267
-))
-\@quotelevel=\count431
-\@quotereset=\count432
+\@vwid@box=\box62
+\sift@deathcycles=\count425
+\@vwid@loff=\dimen265
+\@vwid@roff=\dimen266
+)) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip98
+\f@nch@O@elh=\skip99
+\f@nch@O@erh=\skip100
+\f@nch@O@olh=\skip101
+\f@nch@O@orh=\skip102
+\f@nch@O@elf=\skip103
+\f@nch@O@erf=\skip104
+\f@nch@O@olf=\skip105
+\f@nch@O@orf=\skip106
+) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count426
+\Gm@cntv=\count427
+\c@Gm@tempcnt=\count428
+\Gm@bindingoffset=\dimen267
+\Gm@wd@mp=\dimen268
+\Gm@odd@mp=\dimen269
+\Gm@even@mp=\dimen270
+\Gm@layoutwidth=\dimen271
+\Gm@layoutheight=\dimen272
+\Gm@layouthoffset=\dimen273
+\Gm@layoutvoffset=\dimen274
+\Gm@dimlist=\toks32
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+\@quotelevel=\count429
+\@quotereset=\count430
  (compterendu.aux)
 \openout1 = `compterendu.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count433
-\scratchdimen=\dimen268
-\scratchbox=\box68
-\nofMPsegments=\count434
-\nofMParguments=\count435
+\scratchcounter=\count431
+\scratchdimen=\dimen275
+\scratchbox=\box63
+\nofMPsegments=\count432
+\nofMParguments=\count433
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count436
-\MPscratchDim=\dimen269
-\MPnumerator=\count437
-\makeMPintoPDFobject=\count438
+\MPscratchCnt=\count434
+\MPscratchDim=\dimen276
+\MPnumerator=\count435
+\makeMPintoPDFobject=\count436
 \everyMPtoPDFconversion=\toks34
 ) (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -705,16 +717,12 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 20.
+Package hyperref Info: Link coloring OFF on input line 24.
  (compterendu.out) (compterendu.out)
 \@outlinefile=\write4
 \openout4 = `compterendu.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: longtable package is loaded.
- (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -729,41 +737,106 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'compterendu.bbl' found.
  (compterendu.bbl)
-Package biblatex Info: Reference section=0 on input line 20.
-Package biblatex Info: Reference segment=0 on input line 20.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(58.75394pt, 480.0pt, 58.75394pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=480.0pt
+* \textheight=591.5302pt
+* \oddsidemargin=-13.51605pt
+* \evensidemargin=-13.51605pt
+* \topmargin=-10.48192pt
+* \headheight=14.61858pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<um.png, id=99, 200.75pt x 200.75pt>
+File: um.png Graphic file (type png)
+<use um.png>
+Package pdftex.def Info: um.png  used on input line 27.
+(pdftex.def)             Requested size: 120.0pt x 120.0037pt.
+[1
+
+{C:/Users/Joseph/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./um.png>]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
  (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (7.94159pt too wide) in paragraph at lines 38--39
-\T1/cmr/m/n/10 Au to-tal, sept vari-ables sous forme de taux ont été choisies pour es-sayer d'expliquer
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 57.
+ (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.70 \subsection{Variables explicatives}
+                                         [1] [2]
+Package epstopdf Info: Source file: <part_appart.eps>
+(epstopdf)                    date: 2022-11-23 12:37:52
+(epstopdf)                    size: 19896 bytes
+(epstopdf)             Output file: <part_appart-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-11-23 12:39:30
+(epstopdf)                    size: 18847 bytes
+(epstopdf)             Command: <miktex-epstopdf --outfile=part_appart-eps-converted-to.pdf part_appart.eps>
+(epstopdf)             \includegraphics on input line 135.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./part_appart-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<part_appart-eps-converted-to.pdf, id=151, 397.485pt x 289.08pt>
+File: part_appart-eps-converted-to.pdf Graphic file (type pdf)
+<use part_appart-eps-converted-to.pdf>
+Package pdftex.def Info: part_appart-eps-converted-to.pdf  used on input line 135.
+(pdftex.def)             Requested size: 238.49283pt x 173.44933pt.
+
+Overfull \hbox (5.54811pt too wide) in paragraph at lines 130--136
+\T1/cmr/m/n/12 ef-fet la vari-able la plus cor-rélée pos-i-tive-ment avec la part de lo-cataires est la part d'appartements.
  []
 
-[1
-
-{C:/Users/Joseph/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2] [3] [4]
-Overfull \hbox (0.47775pt too wide) in paragraph at lines 155--156
-\T1/cmr/m/n/10 Dans un pre-mier temps, le test $\OML/cmm/m/it/10 F$ \T1/cmr/m/n/10 de sig-ni-fica-tiv-ité con-jointe est fait. L'hypothèse
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--175
+[3] [4 <./part_appart-eps-converted-to.pdf>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 212--217
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 269--296
-
+[6]
+Overfull \hbox (9.00691pt too wide) in paragraph at lines 251--253
+[]\T1/cmr/m/n/12 Les statis-tiques de test $\OML/cmm/m/it/12 t[]; t[]; t[]$ \T1/cmr/m/n/12 et $\OML/cmm/m/it/12 t[]$ \T1/cmr/m/n/12 sont in-férieures en valeur en ab-solue au seuil. L'hypothèse
  []
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 311--338
 
-LaTeX Warning: Reference `appendix:erreurs' on page 8 undefined on input line 321.
+ []
 
+[8] [9]
 Package epstopdf Info: Source file: <Graph.eps>
 (epstopdf)                    date: 2022-11-23 00:55:06
 (epstopdf)                    size: 23262 bytes
@@ -771,52 +844,35 @@ Package epstopdf Info: Source file: <Graph.eps>
 (epstopdf)                    date: 2022-11-23 00:55:12
 (epstopdf)                    size: 9160 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Graph-eps-converted-to.pdf Graph.eps>
-(epstopdf)             \includegraphics on input line 325.
+(epstopdf)             \includegraphics on input line 366.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Graph-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Graph-eps-converted-to.pdf, id=151, 397.485pt x 289.08pt>
+<Graph-eps-converted-to.pdf, id=219, 397.485pt x 289.08pt>
 File: Graph-eps-converted-to.pdf Graphic file (type pdf)
 <use Graph-eps-converted-to.pdf>
-Package pdftex.def Info: Graph-eps-converted-to.pdf  used on input line 325.
+Package pdftex.def Info: Graph-eps-converted-to.pdf  used on input line 366.
 (pdftex.def)             Requested size: 238.49283pt x 173.44933pt.
-[8] [9 <./Graph-eps-converted-to.pdf>] [10]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 368.
- (C:\Users\Joseph\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Overfull \hbox (11.29344pt too wide) in paragraph at lines 369--369
-\T1/cmr/m/sc/10 url\T1/cmr/m/n/10 : []$\T1/cmtt/m/n/10 https : / / www . inegalites . fr / pauvrete -[] locataires -[] proprietaires$[]\T1/cmr/m/n/10 . 
- []
-
-
-Overfull \hbox (22.84238pt too wide) in paragraph at lines 369--369
-\T1/cmr/m/it/10 grands et moins pe-u-plés\T1/cmr/m/n/10 . 2021. \T1/cmr/m/sc/10 url\T1/cmr/m/n/10 : []$\T1/cmtt/m/n/10 https : / / www . insee . fr / fr / statistiques /
- []
-
-[11] (compterendu.aux)
-
-LaTeX Warning: There were undefined references.
-
+[10 <./Graph-eps-converted-to.pdf>] [11] (premierereg.tex) [12] (secondereg.tex) (residus.tex) [13] [14] (compterendu.aux)
 Package rerunfilecheck Info: File `compterendu.out' has not changed.
-(rerunfilecheck)             Checksum: 75D2C9DE91B1BB43B02D18A6A2E277CB;3343.
+(rerunfilecheck)             Checksum: 468AA92C30AAEDD57D808A1F98F3B760;3810.
 Package logreq Info: Writing requests to 'compterendu.run.xml'.
 \openout1 = `compterendu.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21695 strings out of 477843
- 383127 string characters out of 2823128
- 1098131 words of memory out of 3000000
- 40295 multiletter control sequences out of 15000+600000
- 479121 words of font info for 48 fonts, out of 8000000 for 9000
+ 22346 strings out of 477843
+ 392894 string characters out of 2823128
+ 1113154 words of memory out of 3000000
+ 40880 multiletter control sequences out of 15000+600000
+ 488519 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,17n,77p,1201b,1337s stack positions out of 10000i,1000n,20000p,200000b,80000s
- <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on compterendu.pdf (11 pages, 226936 bytes).
+ 72i,17n,77p,1201b,1683s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Joseph\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Joseph/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on compterendu.pdf (15 pages, 342514 bytes).
 PDF statistics:
- 516 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 805 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 

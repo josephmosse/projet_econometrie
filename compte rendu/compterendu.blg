@@ -1,15 +1,15 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'compterendu.blg'
-[146] biber-MSWIN64:340> INFO - === 
-[197] Biber.pm:418> INFO - Reading 'compterendu.bcf'
-[357] Biber.pm:978> INFO - Found 7 citekeys in bib section 0
-[379] Biber.pm:4401> INFO - Processing section 0
-[395] Biber.pm:4592> INFO - Looking for bibtex file 'bibliographie.bib' for section 0
-[461] bibtex.pm:1713> INFO - LaTeX decoding ...
-[473] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliographie.bib'
-[541] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[541] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[541] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[541] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
-[554] bbl.pm:654> INFO - Writing 'compterendu.bbl' with encoding 'UTF-8'
-[558] bbl.pm:757> INFO - Output to compterendu.bbl
+[159] biber-MSWIN64:340> INFO - === 
+[222] Biber.pm:418> INFO - Reading 'compterendu.bcf'
+[382] Biber.pm:978> INFO - Found 15 citekeys in bib section 0
+[403] Biber.pm:4401> INFO - Processing section 0
+[421] Biber.pm:4592> INFO - Looking for bibtex file 'bibliographie.bib' for section 0
+[511] bibtex.pm:1713> INFO - LaTeX decoding ...
+[529] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliographie.bib'
+[638] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[639] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[639] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[639] Biber.pm:4227> INFO - No sort tailoring available for locale 'en-US'
+[658] bbl.pm:654> INFO - Writing 'compterendu.bbl' with encoding 'UTF-8'
+[666] bbl.pm:757> INFO - Output to compterendu.bbl

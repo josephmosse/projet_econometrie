@@ -101,7 +101,7 @@
       \verb https://www.insee.fr/fr/statistiques/5400123
       \endverb
     \endentry
-    \entry{insee_portrait_social}{online}{}
+    \entry{dipsup}{online}{}
       \name{author}{1}{}{%
         {{hash=69ec093dab9cf86b631679c6e3c79926}{%
            family={Insee},
@@ -114,6 +114,58 @@
       \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
       \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Diplômes-Formation en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6454124
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6454124
+      \endverb
+    \endentry
+    \entry{jeune_persagee}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Évolution et structure de la population en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6456153
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6456153
+      \endverb
+    \endentry
+    \entry{insee_portrait_social}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{4}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -139,7 +191,7 @@
       \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
-      \field{extraname}{3}
+      \field{extraname}{5}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -165,7 +217,7 @@
       \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
-      \field{extraname}{4}
+      \field{extraname}{6}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -177,6 +229,58 @@
       \endverb
       \verb{url}
       \verb https://www.insee.fr/fr/statistiques/4126450
+      \endverb
+    \endentry
+    \entry{locataire}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{7}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Logements en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6454155
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6454155
+      \endverb
+    \endentry
+    \entry{appart}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{8}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Logements et résidences principales en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6454155
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6454155
       \endverb
     \endentry
     \entry{prix_immo_paris}{online}{}
@@ -191,7 +295,7 @@
       \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
       \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
-      \field{extraname}{5}
+      \field{extraname}{9}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -203,6 +307,110 @@
       \endverb
       \verb{url}
       \verb https://www.insee.fr/fr/statistiques/4294778
+      \endverb
+    \endentry
+    \entry{pauvrete}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{10}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principaux indicateurs sur les revenus et la pauvreté aux niveaux national et local}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6036902
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6036902
+      \endverb
+    \endentry
+    \entry{chomage}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{11}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taux de chômage localisés par sexe et âge en moyenne annuelle en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/2134411
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/2134411
+      \endverb
+    \endentry
+    \entry{ville}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{12}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Téléchargement du fichier d'ensemble des populations légales en 2019}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/6011070#consulter
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/6011070#consulter
+      \endverb
+    \endentry
+    \entry{urba}{online}{}
+      \name{author}{1}{}{%
+        {{hash=69ec093dab9cf86b631679c6e3c79926}{%
+           family={Insee},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{fullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{bibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorbibnamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authornamehash}{69ec093dab9cf86b631679c6e3c79926}
+      \strng{authorfullhash}{69ec093dab9cf86b631679c6e3c79926}
+      \field{extraname}{13}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Toujours plus d'habitants dans les unités urbaines}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.insee.fr/fr/statistiques/4806684
+      \endverb
+      \verb{url}
+      \verb https://www.insee.fr/fr/statistiques/4806684
       \endverb
     \endentry
   \enddatalist
